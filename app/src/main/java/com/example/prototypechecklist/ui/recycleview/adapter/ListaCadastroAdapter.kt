@@ -1,11 +1,13 @@
 package com.example.prototypechecklist.ui.recycleview.adapter
 
 import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.prototypechecklist.R
@@ -16,6 +18,7 @@ class ListaCadastroAdapter(
     private val cadastros : List<Cadastro>
 ) : RecyclerView.Adapter<ListaCadastroAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        @RequiresApi(Build.VERSION_CODES.N)
         fun vincula(cadastro: Cadastro) {
             val placa = itemView.findViewById<TextView>(R.id.placa)
             placa.text = cadastro.placa
