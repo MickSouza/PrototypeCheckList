@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.FormularioActivity"
+        >
+
+        <EditText
+            android:id="@+id/placa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:hint="Digite a Placa"
+            android:inputType="textCapCharacters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/modeloBase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Modelo Base"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="@id/placa"
+            app:layout_constraintStart_toStartOf="@id/placa"
+            app:layout_constraintTop_toBottomOf="@+id/placa" />
+
+        <EditText
+            android:id="@+id/uf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="UF"
+            android:inputType="textCapCharacters"
+            app:layout_constraintEnd_toEndOf="@id/modeloBase"
+            app:layout_constraintStart_toStartOf="@id/modeloBase"
+            app:layout_constraintTop_toBottomOf="@+id/modeloBase" />
+
+        <EditText
+            android:id="@+id/loja"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Loja"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="@id/uf"
+            app:layout_constraintStart_toStartOf="@id/uf"
+            app:layout_constraintTop_toBottomOf="@+id/uf" />
+
+        <EditText
+            android:id="@+id/tipoServico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Tipo do Serviço"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="@id/loja"
+            app:layout_constraintStart_toStartOf="@id/loja"
+            app:layout_constraintTop_toBottomOf="@+id/loja" />
+
+        <EditText
+            android:id="@+id/tipoFiscalizacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de Fiscalização"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="@id/tipoServico"
+            app:layout_constraintStart_toStartOf="@id/tipoServico"
+            app:layout_constraintTop_toBottomOf="@+id/tipoServico" />
+
+        <EditText
+            android:id="@+id/instalador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Instalador"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="@id/tipoFiscalizacao"
+            app:layout_constraintStart_toStartOf="@id/tipoFiscalizacao"
+            app:layout_constraintTop_toBottomOf="@+id/tipoFiscalizacao" />
+
+        <EditText
+            android:id="@+id/tipoKit1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Tipo Kit1"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/instalador"
+            app:layout_constraintStart_toStartOf="@id/instalador"
+            app:layout_constraintTop_toBottomOf="@+id/instalador" />
+
+        <EditText
+            android:id="@+id/pocsag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="PocSag 1"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@id/tipoKit1"
+            app:layout_constraintStart_toStartOf="@id/tipoKit1"
+            app:layout_constraintTop_toBottomOf="@+id/tipoKit1" />
+
+        <EditText
+            android:id="@+id/tipoKit2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Tipo Kit2"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/pocsag"
+            app:layout_constraintStart_toStartOf="@id/pocsag"
+            app:layout_constraintTop_toBottomOf="@+id/pocsag" />
+
+        <EditText
+            android:id="@+id/pocsag2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="PocSag 2"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="@id/tipoKit2"
+            app:layout_constraintStart_toStartOf="@id/tipoKit2"
+            app:layout_constraintTop_toBottomOf="@+id/tipoKit2" />
+
+        <EditText
+            android:id="@+id/odometro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Odômetro"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/pocsag2"
+            app:layout_constraintStart_toStartOf="@id/pocsag2"
+            app:layout_constraintTop_toBottomOf="@+id/pocsag2" />
+
+        <Button android:id="@+id/salvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:text="Salvar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/odometro"
+            app:layout_constraintVertical_bias="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
