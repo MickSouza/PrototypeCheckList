@@ -12,7 +12,7 @@ import com.example.prototypechecklist.model.Cadastro
 import com.example.prototypechecklist.ui.recycleview.adapter.ListaCadastroAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
+class RelatorioActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
