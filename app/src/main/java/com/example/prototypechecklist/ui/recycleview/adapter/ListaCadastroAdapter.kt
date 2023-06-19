@@ -42,6 +42,8 @@ class ListaCadastroAdapter(
             tipoKit2.text = cadastro.tipoKit2
             val pocSag2 = itemView.findViewById<TextView>(R.id.pocsag2)
             pocSag2.text = cadastro.pocSag2
+            val odometro = itemView.findViewById<TextView>(R.id.odometro)
+            odometro.text = cadastro.odometro
 
         }
     }

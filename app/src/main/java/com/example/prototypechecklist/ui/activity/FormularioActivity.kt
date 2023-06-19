@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.RequiresApi
+import androidx.compose.ui.text.input.TextFieldValue
 import com.example.prototypechecklist.R
 import com.example.prototypechecklist.dao.ProdutosDao
 import com.example.prototypechecklist.model.Cadastro
@@ -19,29 +20,29 @@ class FormularioActivity : AppCompatActivity(R.layout.activity_formulario) {
         super.onCreate(savedInstanceState)
         val salvar = findViewById<Button>(R.id.salvar)
         salvar.setOnClickListener {
-            val campoPlaca = findViewById<EditText>(R.id.placa)
+            val campoPlaca = findViewById<EditText>(R.id.placaValor)
             val placa = campoPlaca.text.toString()
-            val campoModeloBase = findViewById<EditText>(R.id.modeloBase)
+            val campoModeloBase = findViewById<EditText>(R.id.modeloBaseValor)
             val modeloBase = campoModeloBase.text.toString()
-            val campoUf = findViewById<EditText>(R.id.uf)
+            val campoUf = findViewById<EditText>(R.id.ufValor)
             val uf = campoUf.text.toString()
-            val campoLoja = findViewById<EditText>(R.id.loja)
+            val campoLoja = findViewById<EditText>(R.id.lojaValor)
             val loja = campoLoja.text.toString()
-            val campoTipoServico = findViewById<EditText>(R.id.tipoServico)
+            val campoTipoServico = findViewById<EditText>(R.id.tipoServicoValor)
             val tipoServico = campoTipoServico.text.toString()
-            val campoTipoFiscaliza = findViewById<EditText>(R.id.tipoFiscalizacao)
+            val campoTipoFiscaliza = findViewById<EditText>(R.id.tipoFiscalizacaoValor)
             val tipoFiscalizacao = campoTipoFiscaliza.text.toString()
-            val campoInstalador = findViewById<EditText>(R.id.instalador)
+            val campoInstalador = findViewById<EditText>(R.id.instaladorValor)
             val instalador = campoInstalador.text.toString()
-            val campoTipokit = findViewById<EditText>(R.id.tipoKit1)
+            val campoTipokit = findViewById<EditText>(R.id.tipoKit1Valor)
             val tipoKit1 = campoTipokit.text.toString()
-            val campoPocSag = findViewById<EditText>(R.id.pocsag)
+            val campoPocSag = findViewById<EditText>(R.id.pocsagValor)
             val pocsag = campoPocSag.text.toString()
-            val campoTipokit2 = findViewById<EditText>(R.id.tipoKit2)
+            val campoTipokit2 = findViewById<EditText>(R.id.tipoKit2Valor)
             val tipoKit2 = campoTipokit2.text.toString()
-            val campoPocSag2 = findViewById<EditText>(R.id.pocsag2)
+            val campoPocSag2 = findViewById<EditText>(R.id.pocsag2Valor)
             val pocsag2 = campoPocSag2.text.toString()
-            val campoOdometro = findViewById<EditText>(R.id.odometro)
+            val campoOdometro = findViewById<EditText>(R.id.odometroValor)
             val odometro = campoOdometro.text.toString()
 
 

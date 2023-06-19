@@ -13,126 +13,251 @@
         tools:context=".ui.activity.FormularioActivity"
         >
 
-        <EditText
-            android:id="@+id/placa"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/placa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
-            android:hint="Digite a Placa"
             android:inputType="textCapCharacters"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        <EditText
-            android:id="@+id/modeloBase"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/placaValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:hint="Placa" />
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/modeloBase"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Modelo Base"
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/placa"
             app:layout_constraintStart_toStartOf="@id/placa"
-            app:layout_constraintTop_toBottomOf="@+id/placa" />
+            app:layout_constraintTop_toBottomOf="@+id/placa"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/uf"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/modeloBaseValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Modelo Base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/uf"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="UF"
-            android:inputType="textCapCharacters"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/modeloBase"
             app:layout_constraintStart_toStartOf="@id/modeloBase"
-            app:layout_constraintTop_toBottomOf="@+id/modeloBase" />
+            app:layout_constraintTop_toBottomOf="@+id/modeloBase"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/loja"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ufValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:hint="UF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/loja"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Loja"
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/uf"
             app:layout_constraintStart_toStartOf="@id/uf"
-            app:layout_constraintTop_toBottomOf="@+id/uf" />
+            app:layout_constraintTop_toBottomOf="@+id/uf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/tipoServico"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lojaValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Loja" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/tipoServico"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Tipo do Serviço"
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/loja"
             app:layout_constraintStart_toStartOf="@id/loja"
-            app:layout_constraintTop_toBottomOf="@+id/loja" />
+            app:layout_constraintTop_toBottomOf="@+id/loja"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/tipoFiscalizacao"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tipoServicoValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Tipo de Serviço" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/tipoFiscalizacao"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Tipo de Fiscalização"
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/tipoServico"
             app:layout_constraintStart_toStartOf="@id/tipoServico"
-            app:layout_constraintTop_toBottomOf="@+id/tipoServico" />
+            app:layout_constraintTop_toBottomOf="@+id/tipoServico"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/instalador"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tipoFiscalizacaoValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Tipo de Fiscalização" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/instalador"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Instalador"
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/tipoFiscalizacao"
             app:layout_constraintStart_toStartOf="@id/tipoFiscalizacao"
-            app:layout_constraintTop_toBottomOf="@+id/tipoFiscalizacao" />
+            app:layout_constraintTop_toBottomOf="@+id/tipoFiscalizacao"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/tipoKit1"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/instaladorValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Instalador" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/tipoKit1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Tipo Kit1"
-            android:inputType="number"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/instalador"
             app:layout_constraintStart_toStartOf="@id/instalador"
-            app:layout_constraintTop_toBottomOf="@+id/instalador" />
+            app:layout_constraintTop_toBottomOf="@+id/instalador"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/pocsag"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tipoKit1Valor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Tipo Kit1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/pocsag"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="PocSag 1"
-            android:inputType="numberDecimal"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/tipoKit1"
             app:layout_constraintStart_toStartOf="@id/tipoKit1"
-            app:layout_constraintTop_toBottomOf="@+id/tipoKit1" />
+            app:layout_constraintTop_toBottomOf="@+id/tipoKit1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/tipoKit2"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pocsagValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="PocSag1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/tipoKit2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Tipo Kit2"
-            android:inputType="number"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/pocsag"
             app:layout_constraintStart_toStartOf="@id/pocsag"
-            app:layout_constraintTop_toBottomOf="@+id/pocsag" />
+            app:layout_constraintTop_toBottomOf="@+id/pocsag"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/pocsag2"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tipoKit2Valor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Tipo Kit2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/pocsag2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="PocSag 2"
-            android:inputType="numberDecimal"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/tipoKit2"
             app:layout_constraintStart_toStartOf="@id/tipoKit2"
-            app:layout_constraintTop_toBottomOf="@+id/tipoKit2" />
+            app:layout_constraintTop_toBottomOf="@+id/tipoKit2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/odometro"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pocsag2Valor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Pocsag2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/odometro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Odômetro"
-            android:inputType="number"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="@id/pocsag2"
             app:layout_constraintStart_toStartOf="@id/pocsag2"
-            app:layout_constraintTop_toBottomOf="@+id/pocsag2" />
+            app:layout_constraintTop_toBottomOf="@+id/pocsag2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/odometroValor"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:hint="Odometro" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button android:id="@+id/salvar"
             android:layout_width="0dp"
