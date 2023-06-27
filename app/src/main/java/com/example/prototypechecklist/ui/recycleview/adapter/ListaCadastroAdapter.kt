@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.prototypechecklist.R
 import com.example.prototypechecklist.model.Cadastro
+import coil.load
+
 
 class ListaCadastroAdapter(
     private val context: Context,
@@ -51,6 +53,7 @@ class ListaCadastroAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.cadastro_item, parent, false)
+
         return ViewHolder(view)
     }
 
@@ -58,6 +61,7 @@ class ListaCadastroAdapter(
         return cadastros.size
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cadastro = cadastros[position]
         holder.vincula(cadastro)

@@ -1,5 +1,6 @@
 package com.example.prototypechecklist.ui.activity
 
+import android.content.DialogInterface
 import android.icu.math.BigDecimal
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.compose.ui.text.input.TextFieldValue
 import com.example.prototypechecklist.R
 import com.example.prototypechecklist.dao.ProdutosDao
@@ -18,7 +20,9 @@ class FormularioActivity : AppCompatActivity(R.layout.activity_formulario) {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val salvar = findViewById<Button>(R.id.salvar)
+
         salvar.setOnClickListener {
             val campoPlaca = findViewById<EditText>(R.id.placaValor)
             val placa = campoPlaca.text.toString()
@@ -60,12 +64,22 @@ class FormularioActivity : AppCompatActivity(R.layout.activity_formulario) {
                 pocSag2 = pocsag2,
                 odometro = odometro
             )
+
             Log.i("From",  "Oncreate: $cadastroNew")
             val dao = ProdutosDao()
             ProdutosDao().add(cadastroNew)
             Log.i("From",  "Oncreate: ${dao.findAll()}")
+            AlertDialog.Builder(this)
+                .setTitle("Titulo")
+                .setMessage("Tem ceretza que deseja salvar")
+                .setView(R.layout.formulario_imagem)
+                .setPositiveButton("Salvar")  { _, _ ->  }
+                .setNegativeButton("Cancelar")  { _, _ ->  }
+                .show()
             finish()
+
         }
+
 
 
     }

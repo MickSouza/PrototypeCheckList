@@ -12,7 +12,8 @@ data class Cadastro(
     val pocSag1: String,
     val tipoKit2: String,
     val pocSag2: String,
-    val odometro: String
+    val odometro: String,
+    val img1: String? = null
         )
 
 
